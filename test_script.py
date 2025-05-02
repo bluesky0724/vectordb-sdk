@@ -5,8 +5,7 @@ from datetime import datetime
 
 # Initialize the client
 client = VectorDBClient(
-    base_url="http://localhost:8000",
-    chunk_endpoint="/documents/{document_id}/chunks"  # Adjust if needed
+    base_url="http://192.168.49.2:31000/"
 )
 
 # Create a library

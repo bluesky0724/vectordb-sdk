@@ -3,9 +3,8 @@ from .exceptions import APIError
 from .models import Library, Document, Chunk
 
 class VectorDBClient:
-    def __init__(self, base_url: str, chunk_endpoint: str = "/documents/{document_id}/chunks"):
+    def __init__(self, base_url: str):
         self.base_url = base_url.rstrip("/")
-        self.chunk_endpoint = chunk_endpoint  # Configurable: e.g., "/chunks" or "/documents/{document_id}/chunks"
 
     def _request(self, method: str, endpoint: str, data: dict = None, params: dict = None, headers: dict = None):
         url = f"{self.base_url}{endpoint}"
